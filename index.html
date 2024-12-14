@@ -53,7 +53,7 @@
             const savedId = getCookie("userId");
             const savedPw = getCookie("userPw");
 
-            if (savedId === "login" && savedPw === "login") {
+            if (savedId === "hidden" && savedPw === "hidden") {
                 showPostContainer();
             } else {
                 promptLogin();
@@ -65,8 +65,8 @@
             const pw = prompt("비밀번호를 입력하세요:");
 
             if (id === "hidden" && pw === "hidden") {
-                setCookie("userId", id, 1);
-                setCookie("userPw", pw, 1);
+                setCookie("userId", id, 7);
+                setCookie("userPw", pw, 7);
                 showPostContainer();
             } else {
                 window.location.href = "about:blank";
